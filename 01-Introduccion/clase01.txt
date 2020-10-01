@@ -1,0 +1,78 @@
+Programación estructurada
+
+- Flujo de ejecución de las instruciones es secuenacial (de la 1ª as la última)
+- Estructuras para controlar el flujo de ejecución
+	- bucles (para repetir instrucciones)
+		- repeticiones por contador
+		- repeticiones condicionadas
+	- selección (para elegir qué instrucciones ejecutar)
+
+Necesito 2 enteros
+
+1- Capturar un entero
+2- Capturar otro entero
+3- Si el segundo entero es distinto de cero
+	4- Realizar la division
+	5- Presentar el resultado
+3b- alternativamente
+	5b- presentar mensaje de error: división entre cero
+6- Poner mensaje de despedida
+
+- Programa que pida al usuario dos valores enteros (el primero se supone que ha de ser menor que el segundo) y muestre por pantalla la lista de todos los valores contenidos entre ambos, extremos incluidos.
+
+- Programa que pida al usuario un valor entero y muestre por pantalla la lista de los 20 siguientes valores.
+
+
+repetir mientras no (se cumpla CONDICION)
+repetir hasta que (se cumpla CONDICION)
+
+
+BUCLE FOR:
+
+1- Asignación de valor incial a la variable contador
+2- Comprobación de que no supera el valor tope. Si se supera, ir a 6
+3- Ejecución del cuerpo del for (instrucciones que hay dentro)
+4- Incremento del contador
+5- Ir a 2
+6- Sale del bucle. Continua siguiente instruccion al for
+
+
+BUCLE REPETIR ... MIENTRAS/HASTA
+
+1- Ejecución del cuerpo del bucle (instrucciones que hay dentro)
+2- Comprobación de la condición. Si no se cumple (HASTA), ir a 1
+3- Sale del bucle. Continua siguiente instruccion al BUCLE
+
+BUCLE MIENTRAS
+
+1- Comprobación de la condición. Si no se cumple, ir a 3
+2- Ejecución del cuerpo del BUCLE (instrucciones que hay dentro)
+3- Sale del bucle. Continua siguiente instruccion al BUCLE
+
+
+ESTRUCTURA SELECTIVA MULTIPLE
+
+1- Según el valor "discreto" de una variable, se deriva la ejecución al valor
+considerado
+2- Si no coincide con ninguno de los valores considerados, se puede establecer una
+"acción por defecto"
+
+*****
+- Programa capture 2 enteros y realice su producto sin utilizar la operacion de multiplicar; solo se podrá usar la operación de sumar
+
+- Programa que muestre los N primeros números impares, partiendo del nº 1, y siendo N un valor introducido por el usuario
+
+****
+
+- Programa que presente un menú con 4 opciones:
+
+Elija operación:
+1 - SUMA
+2 - RESTA
+3 - MULTIPLICA
+4 - DIVIDE
+
+Debe capturar la opción elegida mediante el número asociado.
+A continuación, debe capturar dos enteros, y realizar la operación correspondiente, presentando el resultado.
+
+- Variacion sobre el programa anterior, de manera que el programa muestre reiteradamente el menú,  y haga los cálculos, añadiendo una quinta opción de SALIR, que si es elegida, hará que el programa se despida y acabe.
