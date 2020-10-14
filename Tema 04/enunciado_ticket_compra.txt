@@ -1,0 +1,24 @@
+Haz un programa que pida tres artículos y los memorice. Para cada artículo, pedirá:
+
+- nombre
+- precio por unidad
+- cantidad de unidades
+
+
+El programa debe memorizar esos datos de cada artículo. El progrma presentará en pantalla la información así:
+
+Artículo	Cantidad	Precio unidad	Subtotal
+-----------------------------------------------------------
+Articulo1	x		y		z
+Articulo2	a		b		c
+Articulo3	m		n		o
+-----------------------------------------------------------
+TOTAL						p
+
+sabiendo que los subtotales se calculan multiplicando cada cantidad de artículo por el precio por unidad, y que el TOTAL
+es la suma de todos los subtotales
+
+
+profesorjim@gmail.com
+
+ASUNTO: Ticket compra
