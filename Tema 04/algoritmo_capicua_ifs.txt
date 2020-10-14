@@ -1,0 +1,52 @@
+
+================
+
+ABCBA
+ABBA
+ABA
+AA
+A
+
+si x >= 10000
+	Primera = x / 10000
+	Quinta = x % 10
+	si Primera == Quinta
+		Segunda = (x % 10000) / 1000;
+		Cuarta = (x % 100) / 10;
+		Si Segunda == Cuarta
+			es capicua
+		si no 
+			no es capicua
+	si no
+		no es capicua
+sino
+	si x>= 1000
+		Primera = x / 1000
+		Cuarta = x % 10
+		si Primera == Cuarta
+			Segunda = (x % 1000) / 100;
+			Tercera = (x % 100) / 10;
+			si Segunda == Tercera
+				es capicua
+			si no
+				no es capicua
+		si no
+			no es capicua
+	si no
+		si x >= 100
+			Primera = x / 100
+			Tercera = x % 10
+			si Primera == Tercera
+				es capicua
+			si no
+				no es capicua
+		si no
+			x >= 10
+				Primera = x / 10;
+				Segunda = x % 10;
+				si Primera == Segunda
+					es capicua
+				si no
+					no es capicua
+			si no
+				es capicua
