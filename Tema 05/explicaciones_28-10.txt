@@ -1,0 +1,202 @@
+*
+
+ *
+***
+
+  *
+ *-*
+*****
+
+   *
+  *-*
+ *---*
+*******
+
+------------------
+
+for
+while
+ se repite hasta que se incumple
+ se repite mientras que se cumple
+
+do-while
+
+for
+while
+do-until
+
+
+===========================================
+
+
+int numeroIntroducido = 0;
+int cuentaNumeros = 0;
+int suma = 0;
+
+while (numeroIntroducido >= 0) {
+  numeroIntroducido = Integer.parseInt(System.console().readLine());
+  cuentaNumeros++; // Incrementa en uno la variable
+  suma += numeroIntroducido; // Equivale a suma = suma + NumeroIntroducido
+}
+
+
+while (numeroIntroducido >= 0) {
+  numeroIntroducido = Integer.parseInt(System.console().readLine());
+  if (numeroIntroducido>=0) {
+    cuentaNumeros++; // Incrementa en uno la variable
+    suma += numeroIntroducido; // Equivale a suma = suma + NumeroIntroducido
+  }
+}
+
+
+while (numeroIntroducido >= 0) {
+  numeroIntroducido = Integer.parseInt(System.console().readLine());
+  cuentaNumeros++; // Incrementa en uno la variable
+  suma += numeroIntroducido; // Equivale a suma = suma + NumeroIntroducido
+}
+cuentaNumeros--;
+suma -= numeroIntroducido;
+
+
+cuentaNumeros = -1;
+while (numeroIntroducido >= 0) {
+  suma += numeroIntroducido; // Equivale a suma = suma + NumeroIntroducido
+  cuentaNumeros++; // Incrementa en uno la variable
+  numeroIntroducido = Integer.parseInt(System.console().readLine());
+}  
+
+
+
+============
+
+i = 1;
+do {
+  System.out.println(i);
+  i++;
+} while (i < 11);
+
+
+i = 1;
+repeat {
+  System.out.println(i);
+  i++;
+} until (i>=11);
+} until (!(i<11));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+do {
+  System.out.print("Dime un número: ");
+  numero = Integer.parseInt(System.console().readLine());
+  if (numero % 2 == 0) {// comprueba si el número introducido es par
+    System.out.println("Qué bonito es el " + numero);
+  } else {
+    System.out.println("No me gustan los números impares, adiós.");
+  }
+} while (numero % 2 == 0);
+
+
+
+do {
+  System.out.print("Dime un número: ");
+  numero = Integer.parseInt(System.console().readLine());
+  if (numero % 2 == 0) {// comprueba si el número introducido es par
+    System.out.println("Qué bonito es el " + numero);
+  }
+} while (numero % 2 == 0);
+System.out.println("No me gustan los números impares, adiós.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String opcion;
+
+do {
+  System.out.print("Dime un número: ");
+  numero = Integer.parseInt(System.console().readLine());
+  if (numero % 2 == 0) {// comprueba si el número introducido es par
+    System.out.println("Qué bonito es el " + numero);
+  } else {
+    System.out.println("No me gustan los números impares.");
+  }
+  System.out.print("¿Desea continuar? (s/n): ");
+  opcion = System.console().readLine();
+} while (opcion.equals("s"));
+
+
+
+
+
+
+
+
+
+
+
+
+String opcion="";
+
+do {
+  System.out.print("Dime un número: ");
+  numero = Integer.parseInt(System.console().readLine());
+  if (numero % 2 == 0) {// comprueba si el número introducido es par
+    System.out.println("Qué bonito es el " + numero);
+    System.out.print("¿Desea continuar? (s/n): ");
+    opcion = System.console().readLine();
+  } else {
+    System.out.println("No me gustan los números impares. Adiós.");
+  }
+} while ((numero % 2 == 0) && opcion.equals("s"));
+
+
+
+
+String patata = "hola";
+
+patata = patata + " hello";
+
+"hola hello"
+
+patata = " hello" + patata;
+
+" hellohola"
+
+
+
+
