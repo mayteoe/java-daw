@@ -1,0 +1,56 @@
+String nombreArt
+int cantidadArt
+float pvpArt
+int tipoIvaArt
+
+
+float precioTotal
+
+float precioSubtotal4
+float precioSubtotal10
+float preciosubtotal21
+
+
+
+repetir
+  capturar nombreArt
+  si nombre <> fin
+    capturar cantidadArt
+    capturar pvpArt
+    capturar tipoIvaArt
+
+    según tipoIvaArt
+      para 4:
+        precioSubtotal4 = precioSubtotal4 + pvpArt x cantidadArt
+      para 10:
+        precioSubtotal10 = precioSubtotal10 + pvpArt x cantidadArt
+      para 21:
+        precioSubtotal21 = precioSubtotal21 + pvpArt x cantidadArt
+
+hasta introducir "fin" sea igual a nombreArt
+
+precioTotal = precioSubtotal4 + precioSubtotal10 + preciosubtotal21
+
+base4 = (precioSubtotal4*100)/104
+base10 = (precioSubtotal10*100)/110
+base21 = (precioSubtotal21*100)/121
+
+presentar precioTotal
+presentar base4, prescioSubtotal4 - base4
+presentar base10, prescioSubtotal10 - base10
+presentar base21, prescioSubtotal21 - base21
+
+100   ----  21
+BASE  ----  IVA
+
+121   ---- 100
+PVP  ----- BASE
+
+base4 = (precioSubtotal4*100)/104
+base10 = (precioSubtotal10*100)/110
+base21 = (precioSubtotal21*100)/121
+
+
+
+
+

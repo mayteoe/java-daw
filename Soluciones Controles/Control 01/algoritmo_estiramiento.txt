@@ -1,0 +1,32 @@
+entero numero
+entero estiramiento
+
+cadena de caracteres resultado=""
+
+
+repetir
+  captar numero
+  si numero es 0
+    mensajito		
+mientras numero sea 0
+
+si numero <0
+ numero lo multiplico por -1
+ mensajito2
+
+repetir
+  captar estiramiento
+  si estiramiento es <=0
+    mensajito3
+mientras estiramiento sea <=0
+
+auxiliar = numero
+
+para cada digito de numero, mientras numero >0
+  digito = resto del numero entre 10
+  repetir estiramiento veces lo siguiente
+    resultado = digito + resultado
+  numero = cociente de numero entre 10
+
+presentar resultado
+
