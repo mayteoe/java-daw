@@ -24,7 +24,10 @@ public class Ejercicio8Bid {
           diferenciaColumnas = diferenciaColumnas*(-1);
         }          
         if (diferenciaColumnas == diferenciaFilas && i!=fila && j!=columna){
-          System.out.print(""+(char)(j+'a')+(i+1)+" ");
+          char columnaSalida, filaSalida;
+          columnaSalida = (char)(j+'a');
+          filaSalida = (char)(i+'1');
+          System.out.print(""+columnaSalida+filaSalida+" ");
         }
       }
     }    
