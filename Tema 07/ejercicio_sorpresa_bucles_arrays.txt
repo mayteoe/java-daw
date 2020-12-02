@@ -1,0 +1,11 @@
+EJERCICIO: Leer completamente antes de nada.
+
+Escribir un programa que rellene aleatoriamente las posiciones de un array. Los valores aleatorios deben pertenecer a un rango, cuyos valores mínimo y máximo deben ser introducidos por el usuario. En las posiciones impares han de ubicarse valores pares, y en las posiciones pares han de ubicarse valores impares. Puede haber valores repetidos.
+
+Cada alumno decide si lo hace sobre una matriz unidimensional o bidimensional. El tamaño de la matriz también debe ser introducido por el usuario. En el caso de matrices bidimensionales, una posición será par o impar según lo sea la suma de las coordenadas fila y columna.
+
+TIEMPO: 30 minutos
+A partir de las 9:00 comienzo a sondear
+
+
+
