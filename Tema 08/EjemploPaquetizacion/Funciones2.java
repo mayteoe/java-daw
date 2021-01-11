@@ -1,4 +1,6 @@
-public class Funciones1 {
+import matematicas.FuncionesAritmeticas;
+
+public class Funciones2 {
   
   public static void main (String[] args) {
     int a, b;
@@ -12,22 +14,18 @@ public class Funciones1 {
     d = Integer.parseInt(System.console().readLine());
     
     Despedida();
-    int resultado1 = Suma(a,b);
+    int resultado1 = FuncionesAritmeticas.Suma(a,b);
     
     
     
     System.out.println("El resultado es: "+resultado1);
-    System.out.println("El resultado es: "+Suma(c,d));
+    System.out.println("El resultado es: "+FuncionesAritmeticas.Suma(c,d));
     
     Despedida();
     
   }
   
-  public static int Suma (int a, int b) {
-    int resultado;
-    resultado = a + b;
-    return resultado;
-  }
+
   
   public static void Despedida () {
     int a=1;
