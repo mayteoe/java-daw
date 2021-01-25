@@ -1,0 +1,26 @@
+Dada una matriz, preséntese por filas y columnas, hacia adelante y hacia atrás.
+El programa ha de rellenar la matriz con valores aleatorios igualmente probables entre 2 valores introducidos por el usuario, ambos incluidos.
+
+/* presenta el array por consola según el formato indicado 
+   formatos válidos: fila,filainvertida,columna,columnainvertida
+   
+ */
+void presentaArray (int[][] imput, String formato)
+
+
+/* reserva la memoria de un array bidimensional
+   rellena sus valores con valores igualmente probables entre valorA y valorB
+ */
+int[][] creaArrayBidimensionalRelleno (int filas, int columna, int valorA, int valorB)
+
+----
+{
+  mostrar info sobre lo que hará el programa
+  pedir datos: filas, columnas, valorMin y valorMax para el relleno aleatorio
+  int[][] arrayBidimensional;
+  arrayBidimensional = creaArrayBidimensionalRelleno (filas,columnas,valorMin y valorMax);
+  presentaArray(arrayBidimensional,"fila");
+  presentaArray(arrayBidimensional,"filainvertida");
+  presentaArray(arrayBidimensional,"columna");
+  presentaArray(arrayBidimensional,"columnainvertida");
+}
