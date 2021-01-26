@@ -37,7 +37,8 @@ public class RecorridosArrayBidimensional2 {
         break;
        
       case "filainvertida":
-        //presentaArrayPorFilas(input,true);
+        auxiliar = invierteFilas(input);
+        presentaArray(auxiliar);
         break;
        
       case "columna":
@@ -46,7 +47,8 @@ public class RecorridosArrayBidimensional2 {
         break;
        
       case "columnainvertida":
-        //presentaArrayPorColumnas(input,true);
+        auxiliar = invierteColumnas(input);
+        presentaArray(auxiliar);
         break;
     }
   }
@@ -94,6 +96,26 @@ public class RecorridosArrayBidimensional2 {
   }
   
   public static int [][] invierteFilas (int[][] a) {
+    int[][] aux=new int[a.length][a[0].length];
+    int caux=0;
+    for(int i=0;i<a.length;i++) {
+      for(int j=a[0].length-1;j>=0;j--) {
+        aux[i][j]=a[i][a[0].length-1-j];
+      }
+    }   
+    return aux;
+  }
+  
+  public static int [][] invierteColumnas (int[][] a) {
+    int [][]resultado;
+    resultado = traspuesta(a);
+    resultado = invierteFilas(resultado);
+    return resultado;
     
+    /*
+    a = traspuesta(a);
+    a = invierteFilas(a);
+    return a;
+    */
   }
 }
