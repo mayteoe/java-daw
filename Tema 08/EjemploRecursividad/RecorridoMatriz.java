@@ -1,6 +1,7 @@
 public class RecorridoMatriz {
   public static void main (String[] args) {
     int [] valores = {2,345,66,3,23,67};
+
     presentaPorPantalla(valores,0);
     System.out.println();
     System.out.println(presentaComoString(valores,0));
