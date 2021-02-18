@@ -5,8 +5,8 @@ public class EjercicioCuentas {
     final int TOPE=5;
     int opcionMenu;
     
-    String [] titulares = new String[5];
-    float [] saldos = new float[5];
+    String [] titulares = new String[TOPE];
+    float [] saldos = new float[TOPE];
     
     for (int i=0; i<TOPE; i++) {
       System.out.print("Indique el nombre del titular "+(i+1)+": ");
