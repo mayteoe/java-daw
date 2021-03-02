@@ -14,6 +14,7 @@ public class ProgramaPersona {
     System.out.println(r.comoTeLlamas() + " - " + r.dimeTuEdad());
     System.out.println(r.toString());
     System.out.println(r);
+    System.out.println(q);
     r.toString();
   }  
 }
