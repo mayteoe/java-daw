@@ -1,0 +1,10 @@
+Crear la clase Alumno como subclase de Persona. El alumno tendrá como atributo de instancia la nota media. El método toString añadirá la nota media a la representación como string del objeto.
+
+Implementar para Alumno el método ponerNotaMedia y dameNotaMedia.
+
+En un progrma principal, manejar con un array de objetos el listado de alumnos de una clase. El array siempre tendrá una cantidad de objetos igual al nº de alumnos de la clase. Inicialmente, el array tendrá 0 alumnos. Mediante un menú, permitir cíclicamente:
+- altas
+- bajas (por el nombre)
+- modificaciones de la nota (por el nombre)
+- listado de alumnos
+- salir
