@@ -1,0 +1,6 @@
+Clase Almacen (para GESTISIMAL)
+
+- Constructor: crea el almacén con un array de Artículos vacío
+- dameArticulo: devuelve un objeto Artículo a partir de su código
+- aniadeArticulo: agrega en el array de Artículos el objeto Artículo que se le pase como argumento
+- listado: devuelve el listado de todos los Artículos contenidos en el almacén
