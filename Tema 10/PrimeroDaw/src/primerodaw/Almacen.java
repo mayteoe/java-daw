@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package primerodaw;
+import java.util.Collections;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -47,5 +49,9 @@ public class Almacen <Cosa>{
       resultado += this.articulos.get(i).toString();
     }
     return resultado;
+  }
+  
+  public void ordenate() {
+    Collections.sort((List)this.articulos);
   }
 }

@@ -1,6 +1,6 @@
 package primerodaw;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{
   // atributos: características que modelan el objeto
   private char[] nombre;
   private float edad;
@@ -58,11 +58,18 @@ public class Persona {
     return resultado;
   }
   
-  
+  @Override
   public boolean equals (Object o) {
     Persona aux = (Persona) o;
     String nombre1 = String.valueOf(this.nombre);
     String nombre2 = String.valueOf(aux.nombre);
     return (nombre1.equals(nombre2));
   }
+
+  public int compareTo (Persona p) {
+    String nombre1 = String.valueOf(this.nombre);
+    String nombre2 = String.valueOf(p.nombre);
+    return (nombre1.compareTo(nombre2));
+  }
+  
 }
