@@ -4,16 +4,7 @@
     Author     : usuario
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="ajedrez.Ficha"%>
-<%  
-  Ficha miCaballo = new Ficha("Caballo","caballo-blanco.png");
-  Ficha miAlfil; 
-
-  do {
-    miAlfil= new Ficha("Alfil","alfil-negro.png");
-  } while (miAlfil.igualPosicion(miCaballo));
-  
-  %>
+<%@page import="ajedrez.Ficha" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +13,15 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+        <%
+          Ficha miCaballo = new Ficha("Caballo","caballo-blanco.png");
+          Ficha miAlfil; 
+        
+          do {
+            miAlfil= new Ficha("Alfil","alfil-negro.png");
+          } while (miAlfil.igualPosicion(miCaballo));
+          
+        %>
         <table border="1">
         <%
           out.println();

@@ -5,15 +5,14 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="ajedrez.Ficha"%>
-<%
-  
+<%  
   Ficha miCaballo = new Ficha("Caballo","caballo-blanco.png");
   Ficha miAlfil; 
-/*
+
   do {
     miAlfil= new Ficha("Alfil","alfil-negro.png");
   } while (miAlfil.igualPosicion(miCaballo));
-  */
+  
   %>
 <!DOCTYPE html>
 <html>
@@ -31,7 +30,7 @@
             out.print("<td align='center'>"+(char)('a'+i)+"</td>");
           }
           out.println("<td></td></tr>");
-          /*
+          
           for (int i=0; i<8; i++) {
             out.print("<tr>");
             out.println("<td>"+(8-i)+"</td>");
@@ -46,7 +45,7 @@
             }
             out.println("<td>"+(8-i)+"</td>");
             out.println("<tr>");
-          }*/
+          }
           out.print("<tr><td></td>");
           for (int i=0; i<8; i++) {
             out.print("<td align='center'>"+(char)('a'+i)+"</td>");
