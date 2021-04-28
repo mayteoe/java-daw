@@ -16,7 +16,8 @@ public class Apuesta {
   public Apuesta (int a, int b, int c, int d, int e, int f) {
     //int [] aux = {a,b,c,d,e,f};
     //this.numeros = aux;
-
+    boolean valida=true;
+    
     this.numeros = new ArrayList<Integer>();
     this.numeros.add(a);
     this.numeros.add(b);
@@ -25,6 +26,23 @@ public class Apuesta {
     this.numeros.add(e);
     this.numeros.add(f);
     
+    for (int i=0; i<6; i++) {
+      if (this.numeros.get(i)<1 || this.numeros.get(i)>49) {
+        valida = false;
+        break;
+      } else {
+        for (int j=0; j<i; j++) {
+          if (this.numeros.get(i)==this.numeros.get(j)) {
+            valida = false;
+            break;
+          }
+        }
+      } 
+    }
+    
+    if (!valida) {
+      this.numeros = new ArrayList<Integer>();
+    }    
        
   }
   
@@ -50,13 +68,21 @@ public class Apuesta {
   public String toString() {
     String resultado = "";
     
-    for (int i=0; i<6; i++) {
-      resultado = resultado + this.numeros.get(i) + " ";
+    if (this.numeros.size()==0) {
+      resultado = "Error: Apuesta no válida.";
+    } else {
+      for (int i=0; i<6; i++) {
+        resultado = resultado + this.numeros.get(i) + " ";
+      }
     }
-    return resultado;
-    
+    return resultado; 
   }
   
-  
+  public boolean apuestaValida() {
+    if (this.numeros.size()>0) {
+      return true;
+    }
+    return false;
+  }
   
 }
