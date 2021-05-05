@@ -24,6 +24,8 @@
       
       ResultSet listado = sentencia.executeQuery ("SELECT * FROM alumnos");
       
+      
+      
       while (listado.next()) {
         int dni;
         String nombre, ape1, ape2;

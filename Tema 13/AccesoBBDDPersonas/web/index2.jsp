@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.ResultSetMetaData"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
@@ -24,19 +25,28 @@
       
       ResultSet listado = sentencia.executeQuery ("SELECT * FROM alumnos");
       
+      ResultSetMetaData metadatos = listado.getMetaData();
       
+      out.print("<table border=1>");
+      out.print("<tr>");
+      
+      for (int i=1; i<=metadatos.getColumnCount(); i++) {
+        out.print("<td><b>"+metadatos.getColumnLabel(i)+"</b></td>");
+      }
+      
+      out.print("</tr>");
       
       while (listado.next()) {
-        int dni;
-        String nombre, ape1, ape2;
-        dni = Integer.parseInt(listado.getString("dni"));
-        nombre = listado.getString("nombre");
-        ape1 = listado.getString("apellido1");
-        ape2 = listado.getString("apellido2");
-        out.print(dni+": "+nombre + " "+  ape1 + " " + ape2 +"<br>");
+        out.print("<tr>");
+        for (int i=1; i<=metadatos.getColumnCount(); i++) {
+          out.print("<td>"+listado.getString(i)+"</td>");
+        }
+        out.print("</tr>");
       }
       conexion.close();
 
+      out.print("</table>");
+      
       %>
   </body>
 </html>
