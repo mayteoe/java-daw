@@ -1,0 +1,5 @@
+- Acceso con login (usuarios válidos precargados en bbdd)
+- Control de sesiones para mantener el logueo
+- Algún desplegable a partir de tabla
+- Altas, bajas, modificaciones, borrados
+- Parametrizar en clase java la conexión a la BBDD
