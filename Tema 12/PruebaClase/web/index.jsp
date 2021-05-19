@@ -15,8 +15,9 @@
   <body>
     <h1>Hello World!</h1>
     <%
-      out.print("hola");
+      out.println("hola<br>");
       Persona p = new Persona("Juan");
+      out.println(p.dameNombre());
     %>
   </body>
 </html>

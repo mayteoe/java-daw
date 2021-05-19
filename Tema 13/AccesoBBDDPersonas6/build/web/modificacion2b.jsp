@@ -4,11 +4,15 @@
     Author     : usuario
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="auxiliar.Alumno"%>
 <%@page import="auxiliar.MiConexionMySQL"%>
+<%--
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Connection"%>
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,17 +25,16 @@
     Se entiende que se modificarán los datos del usuario correspondiente al DNI indicado.<br>
     <%
       MiConexionMySQL laconexion = new MiConexionMySQL();
-      Statement sentencia = laconexion.dameManejadorSentencia();
+      
 
       
-      String dni = request.getParameter("dni");
+      int dni = Integer.parseInt(request.getParameter("dni"));
       
-      ResultSet listado = sentencia.executeQuery ("SELECT * FROM alumnos WHERE dni="+dni);
-      listado.next();
-      String nombre = listado.getString("nombre");
-      String apellido1 = listado.getString("apellido1");
-      String apellido2 = listado.getString("apellido2");
-      String ciudad = listado.getString("ciudad");
+      Alumno modificable = laconexion.consultaAlumno(dni);
+      String nombre = modificable.getNombre();
+      String apellido1 = modificable.getApellido1();
+      String apellido2 = modificable.getApellido2();
+      String ciudad = modificable.getCiudad();
     %>
     <form action="procesarModificacion.jsp" method="POST">
       DNI: <input type="number" name="dni" value=<%=dni%>><br>
@@ -40,19 +43,20 @@
       Segundo apellido: <input type="text" name="apellido2" value="<%=apellido2%>"><br>
       Ciudad: <select name="ciudad"><option value="">Elija opción</option>
         <%
-          String consultaCiudades = "SELECT * FROM ciudades";
-          Statement sentencia2 = laconexion.dameManejadorSentencia();
-          ResultSet ciudades = sentencia2.executeQuery(consultaCiudades);
-          String selected;
           
-          while (ciudades.next()) {
-            if (ciudades.getString(1).equals(ciudad)) {
+          ArrayList<String> listadoCiudades = laconexion.consultaCiudades();
+          
+          String selected;
+                   
+          for (String ciudadAux : listadoCiudades) {
+          
+            if (ciudadAux.equals(ciudad)) {
               selected =" selected ";
             } else {
               selected = "";
             }
             %>
-            <option <%=selected%> value="<%=ciudades.getString(1)%>"><%=ciudades.getString(1)%></option>
+            <option <%=selected%> value="<%=ciudadAux%>"><%=ciudadAux%></option>
             <%
           }
             

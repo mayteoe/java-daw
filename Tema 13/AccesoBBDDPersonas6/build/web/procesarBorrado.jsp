@@ -4,10 +4,13 @@
     Author     : usuario
 --%>
 
+
 <%@page import="auxiliar.MiConexionMySQL"%>
+<%--
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,14 +21,11 @@
   <body>
     <%
       MiConexionMySQL laconexion = new MiConexionMySQL();
-      Statement sentencia = laconexion.dameManejadorSentencia();
+     
     
-      String dni = request.getParameter("dni");
+      int dni = Integer.parseInt(request.getParameter("dni"));
       
-      String sqlDelete = "DELETE FROM alumnos WHERE dni="+dni;
-           
-      sentencia.execute(sqlDelete);
-      
+      laconexion.borrarAlumno(dni);
 
       laconexion.cierraConexion();
     %>

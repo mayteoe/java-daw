@@ -25,6 +25,7 @@ public class MiConexionMySQL {
   private String usuario;
   private String contrasenia;
   
+  
   public MiConexionMySQL () {
     this.servidor="localhost";
     this.baseDatos="personas";
@@ -96,6 +97,59 @@ public class MiConexionMySQL {
     }
     
     return resultado;
+  }
+  
+  
+  public Alumno consultaAlumno(int dni) {
+    Alumno resultado = null;
+    Statement sentencia;
+    try {
+      if (this.conexion != null) {
+        sentencia = this.conexion.createStatement();
+        ResultSet listado = sentencia.executeQuery ("SELECT * FROM alumnos WHERE dni="+dni);
+        if (listado.next()) {
+          resultado = new Alumno(listado.getInt("DNI"),listado.getString("nombre"),listado.getString("apellido1"),listado.getString("apellido2"),listado.getString("ciudad"));
+        }
+      }
+    } catch (SQLException ex) {
+      Logger.getLogger(MiConexionMySQL.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    return resultado;
+  }
+  
+  public void actualizarAlumno(Alumno a) {
+    Alumno resultado = null;
+    Statement sentencia;
+    try {
+      if (this.conexion != null) {
+        sentencia = this.conexion.createStatement();
+        
+        String sqlUpdate = "UPDATE alumnos SET nombre='"+a.getNombre()+"',apellido1='"+a.getApellido1()+"',apellido2='"+a.getApellido2()+"',ciudad='"+a.getCiudad()+"' WHERE dni="+a.getDNI();
+       
+        sentencia.execute(sqlUpdate);
+      }
+    } catch (SQLException ex) {
+      Logger.getLogger(MiConexionMySQL.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+  }
+  
+  public void borrarAlumno(int dni) {
+    Alumno resultado = null;
+    Statement sentencia;
+    try {
+      if (this.conexion != null) {
+        sentencia = this.conexion.createStatement();
+        
+        String sqlBorra = "DELETE FROM alumnos WHERE dni="+dni;
+       
+        sentencia.execute(sqlBorra);
+      }
+    } catch (SQLException ex) {
+      Logger.getLogger(MiConexionMySQL.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
   }
   
 }
